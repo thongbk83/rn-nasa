@@ -10,3 +10,9 @@ Tech : react native , redux , redux-thunk , firebase , expo
 - run : npm start
 
 - expo snack : https://snack.expo.io/@thongbk83/github.com-thongbk83-rn-nasa
+
+# website version 
+source https://gitlab.com/phanhongthong/nasa_webpack
+demo : https://nasa-webpack.herokuapp.com/
+tech: reactjs , webpack , redux , redux-thunk , Jest , enyzme
+
