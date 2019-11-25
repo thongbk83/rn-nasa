@@ -154,11 +154,10 @@ const ItemDetailScreen = props => {
         <Text style={styles.title}>{itemDetail.title}</Text>
         <Text style={styles.details}>{itemDetail.description}</Text>
       </ScrollView>
-      <ImageBackground
-        style={[styles.fixed, styles.containter, { zIndex: -1 }]}
+      <Image
         source={{ uri: "https://i.ibb.co/N2KF18b/background.jpg" }}
+        style={[styles.fixed, styles.containter, { zIndex: -1 }]}
       />
-
       <BottomNavigation
         onTabPress={newTab => onClickIconHandler(newTab.key)}
         renderTab={renderTab}
