@@ -156,7 +156,7 @@ const ItemDetailScreen = props => {
       </ScrollView>
       <ImageBackground
         style={[styles.fixed, styles.containter, { zIndex: -1 }]}
-        source={require("../background.jpg")}
+        source={{ uri: "https://i.ibb.co/N2KF18b/background.jpg" }}
       />
 
       <BottomNavigation
