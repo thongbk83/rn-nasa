@@ -98,7 +98,7 @@ const Collection = props => {
     }
   };
 
-  return collection.loading ? (
+  return collection && collection.loading ? (
     <View style={styles.loading}>
       <ActivityIndicator size="large" color="#0000ff" />
     </View>

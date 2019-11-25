@@ -9,10 +9,7 @@ export const addToCollection = imageData => async dispatch => {
       JSON.stringify(imageData)
     );
 
-    dispatch({
-      type: actionTypes.ADD_IMAGE_TO_COLLECTION,
-      payload: res.data
-    });
+    dispatch(getCollection());
   } catch (err) {
     console.log(err);
     dispatch({
@@ -29,7 +26,11 @@ export const getCollection = () => async dispatch => {
       "https://nasa-collection-b906d.firebaseio.com/collection.json"
     );
 
-    let keys = Object.keys(res.data);
+    let keys = [];
+    if (res.data) {
+      keys = Object.keys(res.data);
+    }
+
     let collectionsData = keys.map(key =>
       Object.assign({ ...res.data[key], id: key })
     );
