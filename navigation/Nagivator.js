@@ -1,18 +1,13 @@
 import React from "react";
-import { Platform, TouchableHighlight, View } from "react-native";
+import { Platform } from "react-native";
 import { createStackNavigator } from "react-navigation-stack";
-import { createBottomTabNavigator } from "react-navigation-tabs";
+
 import { createAppContainer } from "react-navigation";
-import { HeaderButtons, Item } from "react-navigation-header-buttons";
-
-import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
-
 import CollectionScreen from "../screens/CollectionScreen";
 import SearchScreen from "../screens/SearchScreen";
 import ItemDetailScreen from "../screens/ItemDetailScreen";
 import EditItemScreen from "../screens/EditItemScreen";
 import FavoriteScreen from "../screens/FavoriteScreen";
-import HeaderButton from "../components/HeaderButton";
 
 import Color from "../constants/Color";
 
@@ -23,7 +18,7 @@ const defaultNavigationOptions = {
   headerTintColor: Platform.OS === "android" ? "white" : Color.accentColor
 };
 
-const MealsNavigator = createStackNavigator(
+const NasaNavigator = createStackNavigator(
   {
     Collection: {
       screen: CollectionScreen,
@@ -58,4 +53,4 @@ const MealsNavigator = createStackNavigator(
   }
 );
 
-export default createAppContainer(MealsNavigator);
+export default createAppContainer(NasaNavigator);

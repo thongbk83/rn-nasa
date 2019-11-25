@@ -5,7 +5,8 @@ import {
   StyleSheet,
   FlatList,
   TouchableOpacity,
-  ActivityIndicator
+  ActivityIndicator,
+  Platform
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -56,7 +57,7 @@ const Collection = props => {
     dispatch(getCollection());
   }, [getCollection]);
 
-  onClickIconHandler = key => {
+  const onClickIconHandler = key => {
     props.navigation.navigate({
       routeName: key
     });
@@ -120,7 +121,11 @@ Collection.navigationOptions = navigationData => {
         onPress={() => navigationData.navigation.navigate("Search")}
       >
         <View style={{ paddingHorizontal: 20 }}>
-          <Ionicons name="ios-add" size={30} color="white"></Ionicons>
+          <Ionicons
+            name="ios-add"
+            size={30}
+            color={Platform.OS === "android" ? "white" : "#ff6f00"}
+          ></Ionicons>
         </View>
       </TouchableOpacity>
     )
